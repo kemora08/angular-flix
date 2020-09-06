@@ -13,7 +13,7 @@ export class MovieApiService {
 
   get(path: string): Promise<any[]> {
     const params: HttpParams = new HttpParams()
-    .append('api_key', this.API_KEY);
+     .append('api_key', this.API_KEY);
 
     return this.httpClient.get<any[]>('${this.URL}${Path}', {params}).toPromise();
 
