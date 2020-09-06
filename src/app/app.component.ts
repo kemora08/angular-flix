@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +6,16 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-   
-  }
+  [x: string]: any;
   searchResults = [];
   myMovieList =  [];
   title = 'Angular Flix';
+
+  ngOnInit(): void {
+
+    this.searchResults = this.movieService.getSearchResults();
+    this.myMovieList = this.movieService.getMovieList();
+    this.movieService.loadMovieList();
+  }
+
 }

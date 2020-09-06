@@ -28,6 +28,7 @@ async searchForMovies(searchTerm: string): Promise<void> {
 
 async loadMovieList(): Promise<void> {
   const response = await this.apiService.get();
+  this.myMovieList.length = 0;
   this.myMovieList.push(...response);
  }
 
