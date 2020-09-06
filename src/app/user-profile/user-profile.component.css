@@ -1,0 +1,23 @@
+.UserProfile .User .name {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-weight: 300;
+  height: 44px;
+}
+.UserProfile .User:hover {
+    cursor: pointer;
+  }
+  .UserProfile .User:hover .image {
+    border: 3px solid #e50914;
+  }
+  .UserProfile .UserProfile-menu {
+    display: none;
+  }
+  
