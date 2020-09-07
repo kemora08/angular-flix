@@ -6,12 +6,12 @@ import { APIService } from './api.service';
   providedIn: 'root'
 })
 export class MovieService {
-
+  searchResults: any[] = [];
+  myMovieList: any[] = [];
   constructor(private apiService: APIService,
               private movieApiService: MovieApiService) { }
 
-  searchResults: any[] = [];
-  myMovieList: any[] = [];
+
 
   getSearchResults(): any[] {
     return this.searchResults;

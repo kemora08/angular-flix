@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from './services/movie.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  [x: string]: any;
   searchResults = [];
   myMovieList =  [];
   title = 'Angular Flix';
+  constructor(private movieService: MovieService) {
+
+  }
 
   ngOnInit(): void {
 

@@ -9,8 +9,8 @@ export class APIService {
 private readonly URL = 'https://ce-authenticated-backend.herokuapp.com/publicapi/movies';
 constructor(private httpClient: HttpClient) { }
 
-get(path: string): Promise<any[]> {
-  return this.httpClient.get<any[]>(this.URL + path).toPromise();
+get(): Promise<any[]> {
+  return this.httpClient.get<any[]>(this.URL).toPromise();
  }
 
  post(movie: any): Promise<any> {
